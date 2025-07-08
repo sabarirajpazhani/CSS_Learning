@@ -1,0 +1,169 @@
+/* Element or Tag Selector  */
+h1{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+h2{
+    background-color:rgb(241, 241, 56);
+    text-align: center;
+    border: 2px solid black;
+}
+
+/* named color */
+.h1class{  
+    color: brown;
+}
+
+/* hex color  */
+.h2class{
+    color: #ff00ff;
+}
+
+/* rgb color  */
+.h3class{
+    color: rgb(64, 255, 0);
+}
+
+/* rgba color  */
+.h4class{
+    color:rgba(245, 39, 39, 0.53);
+}
+
+/* hsl color  */
+.h5class{
+    color: hsl(204, 100%, 50%);
+}
+
+
+.title{
+    text-align: center;
+    background-color: aquamarine;
+    margin-left: 20%;
+    margin-right: 20%
+}
+
+p[id*="text"]{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+/* text start  */
+#textstart{
+    text-align: start;
+}
+
+/* text end  */
+#textend{
+    text-align: end;
+}
+
+/* text center  */
+#textcenter{
+    text-align: center;
+}
+
+/* text justify  */
+#textjustify{
+    text-align: justify;
+}
+
+
+p[class*="txt"]{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.txtright{
+    text-align-last: right;
+}
+
+.txtleft{
+    text-align-last: left;
+}
+
+.txtcenter{
+    text-align-last: center;
+}
+
+span.g1 {
+  vertical-align: bottom;
+  display: inline-block; /* Important */
+  background-color: yellow; /* Just for demo to see the effect */
+}
+
+
+.td1{
+    text-decoration-line: overline;
+    text-decoration-color: blue;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+
+}
+.td2{
+    text-decoration-line:underline;
+}
+
+.td3{
+    text-decoration-line: overline underline;
+}
+
+.td4{
+    text-decoration: underline dotted;
+}
+
+.td5{
+    text-decoration-line: line-through;
+    text-decoration-thickness: 3px;
+
+}
+
+.td6{
+    text-decoration: underline wavy red 3px ;
+    /* text-decoration-thickness: 2px; */
+    font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+
+.fs1{
+    font-size: large;
+}
+.fs2{
+    font-size: small;
+}
+.fs3{
+    font-size: xx-large;
+}
+
+.fs4{
+    font-size: xx-small;
+}
+.fs5{
+    font-size: 2rem;
+}
+
+
+/* Responsive h3  */
+h1.fs6{
+    font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+.ff1{
+    font-family: serif;
+}
+.ff2{
+    font-family: sans-serif;
+}
+.ff3{
+    font-family: monospace;
+}
+.ff4{
+    font-family: cursive;
+}
+.ff5{
+    font-family:fantasy;
+}

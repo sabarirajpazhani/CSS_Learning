@@ -151,7 +151,7 @@ span.g1 {
 h1.fs6{
     font-size: clamp(1rem, 2vw, 2.5rem);
 }
-
+/* ------------------- */
 .ff1{
     font-family: serif;
 }
@@ -166,4 +166,73 @@ h1.fs6{
 }
 .ff5{
     font-family:fantasy;
+}
+
+.para{
+    background-color: aqua;
+    padding: 40px;
+    margin: 50px 40px 50px 40px ;
+}
+
+/* responsive margin  */
+.paras{
+    background-color: blueviolet;
+    padding: 30px 20px;
+    margin: clamp(30px, 2vw, 40px);
+}
+
+
+/* borders  */
+
+.b1{
+    border-style: dotted;
+    border-width: 3px;
+}
+.b2{
+    border-style: groove;
+}
+.b3{
+    border-style: solid;
+    border-width: thin;
+}
+.b4{
+    border-bottom: 10px solid black;
+}
+.b5{
+    border: double orange 1em;
+    border-image: url("https://www.w3.org/TR/css-backgrounds-3/images/border.png") 30 round;
+}
+
+body{
+    background: radial-gradient(rgb(188, 210, 243), rgb(240, 146, 140)), url("https://img.freepik.com/free-vector/abstract-banner-with-low-poly-plexus-network-communications-design_1048-12914.jpg?semt=ais_hybrid&w=740");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-blend-mode:multiply;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+
+}
+
+h1.clip{
+    text-align: center;
+    font-size: 300px;
+    background-clip: text;
+    color: transparent;
+    background-image: url("https://www.gislen.com/wp-content/uploads/2024/08/30th-Anniversary-scaled.webp");
+}
+
+span{
+    background-color: hsla(239, 84%, 52%, 0.3);
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    display: inline-flex;
+} 
+
+div{
+    font-size: 1rem;
+}
+div p{
+    font-size: 2em;
 }

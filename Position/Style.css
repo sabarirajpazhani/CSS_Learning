@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(178, 228, 228);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.title1{
+    /* ----fixed---  */
+    position: fixed;  
+    border: 3px solid black;
+    font-size: 100px;
+    background-image: url("../Positoins/Assests/Image.jpg");
+    background-size: contain;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    width: 90vw;
+    left: 5%;
+    /* ---z-index--- */
+    z-index: 1;  
+}
+
+h1.Sticky{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    /* translate: -50% -50%; */
+    /* ---sticky---- */
+    position: sticky;
+    top: 0px;
+    left: 50%;
+    text-align: center;
+}
+
+div{
+    /* ---absolute---- */
+    position: absolute;
+    left: 40%;
+    top:30%;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+}
+
+p{
+    position: absolute;
+    top: 60%;
+    font-size: x-large;
+   
+}
+

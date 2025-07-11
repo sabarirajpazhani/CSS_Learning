@@ -104,3 +104,46 @@
     padding: 20px;
     width: 100px;
 }
+
+
+
+
+
+.order{
+    background-color: rgb(60, 61, 61);
+    display: flex;
+    margin-top: 30px;
+}
+.order > *{
+    background-color:  rgb(100, 178, 250);
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+.order div{
+    flex-grow: 1;
+}
+
+.a1{
+    order: 3;
+    transition: all 0.5s ease-in-out;
+}
+.a2{
+    order: 1;
+    transition: all 0.5s ease-in-out;
+}
+.a3{
+    order: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.a1:hover{
+    flex-grow: 10;
+}
+.a2:hover{
+    flex-grow: 10;
+}
+.a3:hover{
+    flex-grow: 10;  
+}

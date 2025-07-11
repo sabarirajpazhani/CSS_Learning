@@ -53,9 +53,15 @@
     padding: 20px;
     width: 100px;
     height: 100px;
-    /* flex: 1 1 150px; */
+    /* flex: 1 1  150px; */
+    flex-grow: 1;
 }
-
+.flexFlow:first-child{
+    flex-grow: 2;
+}
+.flexFlow:nth-child(2){
+    flex-grow: 2;
+}
 .justifyContent{
     background-color: rgb(80, 167, 248);
     display: flex;
@@ -136,6 +142,8 @@
 .a3{
     order: 1;
     transition: all 0.5s ease-in-out;
+    flex-basis: 900px;
+   
 }
 
 .a1:hover{
@@ -146,4 +154,37 @@
 }
 .a3:hover{
     flex-grow: 10;  
+    background-color: rgb(241, 175, 175);
+}
+
+
+.shrink{
+     background-color: rgb(60, 61, 61);
+    display: flex;
+    margin-top: 30px;
+
+}
+.shrink > *{
+    background-color:  rgb(100, 178, 250);
+    margin: 10px;
+    padding: 20px;
+    width: 400px;
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.shrink div{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.a11:hover{
+    flex-shrink:10;
+}
+.a12:hover{
+    flex-shrink:10;
+}
+.a13:hover{
+    flex-shrink:10;
 }

@@ -1,0 +1,313 @@
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.trans {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.child {
+  text-align: center;
+  border: 2px solid black;
+  padding: 10px 0;
+  width: 100px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.child:hover {
+  border: 4px solid black;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 8px 8px 20px red;
+  background-color: rgb(237, 114, 114);
+  transform: rotate(10deg);
+  color: white;
+}
+
+.timingFun {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.timingFun > div {
+  background-color: rgb(120, 120, 234);
+  padding: 20px;
+  width: 50px;
+  border-radius: 20px;
+  text-align: center;
+  /* transition: width 0.3s linear; */
+  /* transition: width 0.5s ease; */
+  /* transition: width 0.3s ease-in; */
+  /* transition: width 0.3s ease-out; */
+  /* transition: width 0.3s ease-in-out; */
+  transition: width 0.3s cubic-bezier(0.96, 0.45, 0, 0.53);
+  transition: width 0.1s steps(2);
+}
+
+.time:hover {
+  width: 300px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.image img {
+  width: 300px;
+  transition: all 0.9s ease-in-out;
+}
+.image img:hover {
+  transform: rotate(180deg);
+}
+
+.image1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.image1 img {
+  width: 600px;
+  transform: rotate(90deg);
+}
+
+.transform {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+
+  perspective: 100px;
+  /* perspective-origin: left top; */
+}
+
+.transchild {
+  background-color: rgb(182, 133, 228);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease;
+  box-shadow: 10px 20px 7px rgb(233, 105, 118);
+
+  /* translate  */
+  /* transform: translate(200px); */
+  /* transform: translate(-200px); */
+  /* transform: translate(200px, 300px); */
+  /* transform: translate(0); */
+  /* transform: translateX(200px);  */
+  /* transform: translateY(200px); */
+  /* transform: translatez(200px);  worked when the parent element have the prespective  */
+
+  /* transform: scale(2); */
+  /* transform: scale(2,5); */
+  /* transform: scaleX(2); */
+  /* transform: scaleY(4); */
+  /* transform: scaleZ(1.2); */
+
+  /* transform: skew(30deg, 20deg); */
+  /* transform: skewy(30deg); */
+  /* transform: skewx(39deg); */
+
+  /* transform: rotate(20deg); */
+  /* transform: rotatex(135deg);   */
+  /* transform: rotatey(135deg); */
+  /* transform: rotatez(135deg); */
+
+  /* transform: matrix(1, 2, 2, 1, 80, 30); */
+
+  /* transform-style: preserve-3d; */
+}
+
+.transchild:hover {
+  /* transform: translateZ(80px); */
+
+  transform: rotateX(180deg);
+  /* transform: rotateY(180deg);
+    transform: rotateZ(1turn);
+
+    transform: scaleZ(2); */
+
+  background-color: rgb(238, 140, 140);
+  box-shadow: 10px 20px 7px rgb(124, 105, 233);
+}
+
+.animation {
+  margin-top: 200px;
+  /* perspective: 100px; */
+}
+
+.anichild {
+  background-color: rgb(81, 165, 42);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+
+  animation-name: animation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  /* animation-iteration-count:1; */
+  animation-direction: alternate;
+  /* animation-fill-mode: forwards; */
+  /* animation-fill-mode: both; */
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+  /* animation: animation 2s ease-in-out 0.3s infinite ; */
+}
+
+/* @keyframes animation{
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(600px);
+    }
+} */
+
+@keyframes animation {
+  /* from{
+         transform: translateX(0px);
+         border-radius: 0%;
+    }
+    to{
+
+         transform:translate(300px) rotatez(1turn);
+         border-radius: 100%;
+
+    } */
+  0% {
+    transform: translateX(0px);
+    border-radius: 0%;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateX(300px) rotatez(1turn);
+    border-radius: 100%;
+  }
+}
+
+.anichild:hover {
+  animation-play-state: paused;
+}
+
+.car {
+  margin-top: 200px;
+}
+.car img {
+  width: 200px;
+  animation: car 2s linear 0.2s infinite normal forwards;
+}
+
+@keyframes car {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(92vw);
+  }
+}
+
+
+
+
+.button{
+  margin-top: 100px; 
+  border: 2px solid #000000;
+  background-color: rgb(0, 0, 0);
+  width: 125px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.btn{
+  background-color: black;
+  color: white;
+  transition: all 0.6s ease-in-out;
+}
+.btn:hover{
+  background-image:radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  padding: 16px 40px;
+  border-radius: 20px;
+}
+
+
+
+
+/* .button{transition: all 0.6s ease-in-out;transition: all 0.6s ease-in-out;transition: all 0.6s ease-in-out;transition: all 0.6s ease-in-out;transition: all 0.6s ease-in-out;
+  margin-top: 100px; 
+  background-color: black;
+  color: white;
+  width: 125px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: all 0.3s ease-in-out;
+} */
+/* .button::after{
+  content: "";
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+.button:hover::after{
+  transform: scale(2)
+} */
+
+
+  /* width: 100px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  animation: fly-path 10s linear infinite;
+
+
+@keyframes fly-path {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(300px, 50px) rotate(10deg);
+  }
+  50% {
+    transform: translate(600px, 0) rotate(-10deg);
+  }
+  75% {
+    transform: translate(900px, 100px) rotate(15deg);
+  }
+  100% {
+    transform: translate(1200px, 0) rotate(0deg);
+  }
+} */

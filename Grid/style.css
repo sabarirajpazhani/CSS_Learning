@@ -27,6 +27,7 @@
     display: grid;
     margin-top: 50px;
     grid-template-columns: 200px 200px 200px;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     background-color: rgb(84, 194, 240);
     gap: 20px;
     padding: 20px;
@@ -103,4 +104,64 @@
     background-image: url("../grid/footer.jpg");
     background-size: contain;
     background-repeat: repeat;
+}
+
+
+.area{
+    background-color: rgb(84, 194, 240);
+    margin-top: 50px;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+  
+    grid-template-areas: 
+    'header header header'
+    'aside main main'
+    'aside main main'
+    'aside main main'
+    'aside footer footer';
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+}
+
+.area >*{
+    background-color: white;
+    padding: 10px;
+}
+
+/* .item44{
+    grid-area: 1/2/3/2;
+} */
+
+/* .item11{
+    grid-area:2/2/4/4;
+} */
+
+
+
+.item11{
+    grid-area: header;
+}
+.item22{
+    grid-area:aside;
+}
+.item33{
+    grid-area: main;
+}
+.item44{
+    grid-area: footer;
+}
+
+.header1{
+    overflow: scroll;
+}
+.header1 img{
+    float: left;
+}
+
+.item22 a{
+    display: block;
+    justify-content: center;
+    margin: 50px 20px;
+
 }

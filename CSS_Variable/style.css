@@ -1,0 +1,32 @@
+:root{
+    --bg-color: rgb(235, 123, 123);
+    --text-color: blue;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+}
+
+p{
+    color: var(--text-color);
+}
+.main{
+    border: 2px solid black;
+    width: 800px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right:auto ;
+    background-color: var(--card-color) ;
+}
+
+body{
+    /* background-color: var(--bg-color); */
+    background-color: var(--card-color);
+}
+
+@property --card-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(63, 62, 62);
+}

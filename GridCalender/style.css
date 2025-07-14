@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&family=Parastoo:wght@400..700&family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.main {
+  background-color: rgb(73, 73, 73);
+  width: 800px;
+  height: 550px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding: 10px;
+  perspective: 900px;
+}
+
+div > * {
+  background-color: rgb(239, 238, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 6px 6px 5px;
+}
+
+.July {
+  grid-area: 1/1/1/8;
+}
+.July ~ div:hover{
+    background-color: aqua;
+    transition: all 1s ease-in-out;
+    transform: rotateY(360deg);
+}
+
+

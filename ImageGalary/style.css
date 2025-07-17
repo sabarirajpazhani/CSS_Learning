@@ -55,7 +55,7 @@ main {
 #sidebutton {
   width: 30px;
   border-radius: 100px;
-  /* position: absolute; */
+  position: absolute;
 }
 #sidebutton {
   z-index: 1;
@@ -72,30 +72,17 @@ aside {
   border-right: 2px solid rgb(0, 0, 0);
 }
 
-main .mainbar {
+.mainbar {
   grid-area: mainbar;
   background: #ff0000;
   display: grid;
-  /* grid-template-columns: ; */
-
-  /* width: min(1000px, 100%); */
-  /* margin: 0 auto; */
-  /* columns: 3 300px;
-  column-gap: 1em; */
-  /* grid-template-columns: 250px auto;
-  grid-template-rows: auto;
-  grid-auto-flow: dense; */
-  /* display: grid; */
-  /* grid-template-columns: repeat(3,1fr);
-  grid-template-rows:repeat(4,1ft); */
-  /* grid-template-columns: repeat(auto-fit,minmax(100px,300px));
-  grid-template-rows: repeat(auto-fit,minmax(100px,1fr)); */
-  /* grid-auto-flow: dense; */
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-flow: row dense;
-  grid-auto-rows: 200px;
-  grid-template-rows: repeat(auto-fit, minmax(auto, 1fr)); */
+  grid-template-columns:repeat(3, 300px);
+  grid-auto-flow: dense;
+  width: min(1300px, 100%);
+}
+.mainbar img{
+    border-radius: 20px;
+    margin-bottom: 1em;
 }
 
 footer {

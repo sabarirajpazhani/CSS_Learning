@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  width: 100%;
+  display: grid;
+  /* grid-template-rows: 80px 900px; */
+  grid-template-areas:
+    "navbar navbar"
+    "main main"
+    "footerbar footerbar";
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+}
+
+nav {
+  grid-area: navbar;
+  background-color: rgb(255, 254, 254);
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.leftside img {
+  width: 70px;
+}
+
+.rightside {
+  list-style: none;
+  display: flex;
+}
+.rightside a {
+  padding: 10px;
+  margin: 20px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.rightside a:hover {
+  background-color: rgb(236, 234, 234);
+  color: rgb(0, 0, 0);
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(69, 68, 69);
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "sidebar mainbar";
+  /* grid-auto-flow: dense; */
+}
+.btn,
+#sidebutton {
+  width: 30px;
+  border-radius: 100px;
+  /* position: absolute; */
+}
+#sidebutton {
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+aside {
+  grid-area: sidebar;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  border-right: 2px solid rgb(0, 0, 0);
+}
+
+main .mainbar {
+  grid-area: mainbar;
+  background: #ff0000;
+  display: grid;
+  /* grid-template-columns: ; */
+
+  /* width: min(1000px, 100%); */
+  /* margin: 0 auto; */
+  /* columns: 3 300px;
+  column-gap: 1em; */
+  /* grid-template-columns: 250px auto;
+  grid-template-rows: auto;
+  grid-auto-flow: dense; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(3,1fr);
+  grid-template-rows:repeat(4,1ft); */
+  /* grid-template-columns: repeat(auto-fit,minmax(100px,300px));
+  grid-template-rows: repeat(auto-fit,minmax(100px,1fr)); */
+  /* grid-auto-flow: dense; */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: row dense;
+  grid-auto-rows: 200px;
+  grid-template-rows: repeat(auto-fit, minmax(auto, 1fr)); */
+}
+
+footer {
+  grid-area: footerbar;
+  background-color: brown;
+}
+
+/* 
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 250px auto;
+    grid-template-rows: 900px;
+    grid-template-areas: "sidebar mainbar";
+  }
+  aside {
+    display: none;
+  }
+  #sidebutton:checked ~ aside {
+    display: flex;
+    flex-direction: column;
+  }
+  #sidebutton:checked {
+    left: 33%;
+  }
+} */
